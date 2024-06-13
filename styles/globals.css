@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+.btn-primary {
+  @apply text-white px-[30px] py-[8px] rounded-3xl bg-primary
+  cursor-pointer hover:opacity-75 transition-all;
+}
 
 
 
