@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../ui/Logo";
 import { FaUserAlt } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import Seach from "../ui/Seach";
+
 
 const Header = () => {
+  const [isSearchModal,setIsSearchModal] = useState(false)
   return (
     <header className="h-[5.5rem] bg-secondary ">
       <div className="container mx-auto flex justify-between items-center text-white h-full">
@@ -27,19 +30,22 @@ const Header = () => {
         </nav>
         <div className="flex gap-4 items-center justify-center">
           <a href="#">
-            <FaUserAlt />
+            <FaUserAlt className="hover:text-primary transition-all" />
           </a>
           <a href="">
-            <FaShoppingCart />
+            <FaShoppingCart  className="hover:text-primary transition-all"/>
           </a>
-          <a href="">
-          <FaSearch />
-          </a>
+          <button onClick={()=>setIsSearchModal(true)}>
+          <FaSearch className="hover:text-primary transition-all" />
+          </button>
          <a href="">
          <button className="btn-primary">Order Online</button>
          </a>
         </div>
       </div>
+      {isSearchModal && 
+       <Seach setIsSearchModal={setIsSearchModal}/>
+       }
     </header>
   );
 };
