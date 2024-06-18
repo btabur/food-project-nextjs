@@ -6,19 +6,20 @@ import { FaSearch } from "react-icons/fa";
 import Seach from "../ui/Seach";
 import { IoMenu } from "react-icons/io5";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import { useRouter } from "next/router";
 
 
 
 const Header = () => {
   const [isSearchModal,setIsSearchModal] = useState(false);
   const [isShowMenu,setIsShowMenu]=useState(false);
+  const router=useRouter()
   return (
-    <header className="h-[5.5rem] bg-secondary ">
+    <header className={`h-[5.5rem] relative z-40 ${router.asPath=="/" ? "bg-transparent" : "bg-secondary "}`}>
       <div className="container mx-auto flex justify-between items-center text-white h-full">
         <Logo />
-        <nav className={`sm:static absolute top-0 right-0 
-        grid place-content-center h-full w-full sm:text-white text-black sm:w-auto sm:h-auto 
-          sm:bg-transparent bg-white 
+        <nav className={`sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-screen
+         sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden z-50 
           ${!isShowMenu && "hidden"} `}>
           <ul className="flex gap-10 sm:flex-row flex-col">
             <li className=" px-[5px] py-[10px] hover:text-primary cursor-pointer">
