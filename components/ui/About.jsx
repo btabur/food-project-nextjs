@@ -18,7 +18,7 @@ const About = () => {
           If you are going to use a passage of Lorem Ipsum, you need to be sure
           there isnt anything embarrassing hidden in the middle of text. All
         </p>
-        <button className="btn-primary text-xl">Read More</button>
+        <button className="btn-primary text-xl">Read More 21.video</button>
       </div>
     </section>
   );
