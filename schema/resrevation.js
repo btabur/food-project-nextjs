@@ -1,13 +1,19 @@
-import * as Yup from "yup";
+import * as Yup from 'yup';
 
-export const reservationSchema = Yup.object({
+export const reservationSchema = Yup.object().shape({
   fullName: Yup.string()
-    .required("Full name is required.")
-    .min(3, "Full name must be at least 3 characters."),
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
   phoneNumber: Yup.string()
-    .required("Full name is required.")
-    .min(10, "Phone number must be at least 10 characters."),
-  email: Yup.string().required("Email is required.").email("Email is invalid."),
-  persons: Yup.string().required("Persons is required."),
-  date: Yup.string().required("Date is required."),
+    .matches(/^[0-9]+$/, "Must be only digits")
+    .min(10, 'Must be exactly 10 digits')
+    .max(10, 'Must be exactly 10 digits')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  persons: Yup.number()
+    .min(1, 'At least 1 person')
+    .required('Required'),
+  date: Yup.date().required('Required').nullable(),
 });
+

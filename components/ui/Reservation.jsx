@@ -3,7 +3,7 @@ import Title from "./Title";
 import Input from "../form/Input";
 import { Formik, useFormik } from "formik";
 import { resolve } from "styled-jsx/css";
-import { reservationSchema } from "@/schema/resrevation";
+import { reservationSchema } from "../../schema/resrevation";
 
 const Reservation = () => {
 
@@ -31,31 +31,35 @@ const Reservation = () => {
       type: "text",
       placeholder: "Your Full Name",
       value: formik.values.fullName,
-      
+      error: formik.errors.fullName,
+      touched: formik.touched.fullName,
     },
     {
       id: 2,
       name: "phoneNumber",
-      type: "phone",
+      type: "tel",
       placeholder: "Your Phone",
       value: formik.values.phoneNumber,
-     
+      error: formik.errors.phoneNumber,
+      touched: formik.touched.phoneNumber,
     },
     {
       id: 3,
       name: "email",
       type: "email",
-      placeholder: "Your email",
+      placeholder: "Your Email",
       value: formik.values.email,
-     
+      error: formik.errors.email,
+      touched: formik.touched.email,
     },
     {
       id: 4,
       name: "persons",
       type: "number",
-      placeholder: "How many pearson?",
+      placeholder: "How many persons?",
       value: formik.values.persons,
-     
+      error: formik.errors.persons,
+      touched: formik.touched.persons,
     },
     {
       id: 5,
@@ -63,7 +67,8 @@ const Reservation = () => {
       type: "datetime-local",
       placeholder: "",
       value: formik.values.date,
-    
+      error: formik.errors.date,
+      touched: formik.touched.date,
     },
   ];
   return (
@@ -71,14 +76,17 @@ const Reservation = () => {
       <form className="w-[40%]" onSubmit={formik.handleSubmit}>
         <Title addClass={"text-4xl mb-3"}>Book a Table</Title>
         <div className="flex flex-col gap-3">
-          {inputs.map((input) => (
+        {inputs.map((input) => (
             <Input
               key={input.id}
               name={input.name}
-              text={input.placeholder}
               type={input.type}
-              onChange={formik.handleChange}
+              placeholder={input.placeholder}
               value={input.value}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              error={input.error}
+              touched={input.touched}
             />
           ))}
         </div>
