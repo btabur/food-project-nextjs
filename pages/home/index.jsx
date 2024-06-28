@@ -5,6 +5,7 @@ import MenuWrapper from '../../components/product/MenuWrapper'
 import About from '../../components/ui/About'
 import Reservation from '../../components/ui/Reservation'
 import Campaing from '../../components/Campaing'
+import Customers from '../../components/customers/Customers'
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <MenuWrapper/>
       <About/>
       <Reservation/>
+      <Customers/>
     </main>
   )
 }
