@@ -44,7 +44,7 @@ const Customers = () => {
   };
   return (
     <section className='container mx-auto mb-36'>
-      <Title addClass={"text-[40px] text-center mb-4 "}> What says Our Customers 30</Title>
+      <Title addClass={"text-[40px] text-center mb-4 "}> What says Our Customers </Title>
         
           <Slider {...settings}>
           <CustomerItem imgSrc={"/images/c1.jpg"}/>

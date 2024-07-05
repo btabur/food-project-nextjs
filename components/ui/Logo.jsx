@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Logo = () => {
+const Logo = ({addClass}) => {
   return (
-    <div className='text-[2rem] font-bold font-dancing'>Feane</div>
+    <div className={`text-[2rem] font-bold font-dancing ${addClass}`}>Feane</div>
   )
 }
 
