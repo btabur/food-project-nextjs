@@ -12,7 +12,7 @@ const Footer = () => {
     <section className="bg-secondary text-white">
       <div className="container mx-auto pt-4">
         <div className="flex flex-wrap">
-          <div className="min-w-[400px] flex flex-col gap-2 flex-1 ">
+          <div className="min-w-[300px] flex flex-col gap-2 flex-1 ">
             <Title addClass={"text-[30px] text-center"}>Contact Us </Title>
             <p className="flex items-center gap-3 justify-center ">
               {" "}
@@ -26,7 +26,7 @@ const Footer = () => {
               <FaEnvelope /> demo@gmail.com
             </p>
           </div>
-          <div className=" min-w-[400px] flex-1  flex flex-col gap-2">
+          <div className=" min-w-[300px] flex-1  flex flex-col gap-2">
             <Logo addClass={'text-center'} />
             <p className="text-center">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -46,8 +46,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className=" min-w-[400px] flex-1  text-center  flex  flex-col gap-3">
-            <Title addClass={'text-4xl'}>Opening House</Title>
+          <div className=" min-w-[300px] flex-1  text-center  flex  flex-col gap-3">
+            <Title addClass={'text-4xl'}>Opening House 32 </Title>
             <p>Every Day</p>
             <p>10:00 -17:00</p>
           </div>

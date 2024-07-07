@@ -7,6 +7,7 @@ import Seach from "../ui/Seach";
 import { IoMenu } from "react-icons/io5";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 
 
@@ -23,16 +24,19 @@ const Header = () => {
           ${!isShowMenu && "hidden"} `}>
           <ul className="flex gap-10 sm:flex-row flex-col">
             <li className=" px-[5px] py-[10px] hover:text-primary cursor-pointer">
-              HOME
+              <Link href={'/'}>HOME</Link>
             </li>
             <li className=" px-[5px] py-[10px] hover:text-primary cursor-pointer">
-              MENU
+              <Link href={'/menu'}>MENU</Link> 
             </li>
             <li className=" px-[5px] py-[10px] hover:text-primary cursor-pointer">
-              ABOUT
+              <Link href={'/about'}>ABOUT
+              </Link>
+              
             </li>
             <li className=" px-[5px] py-[10px] hover:text-primary cursor-pointer">
-              BOOK TABLE
+              <Link href={'/reservation'}> BOOK TABLE</Link>
+             
             </li>
           </ul>
           {isShowMenu && <button onClick={()=> setIsShowMenu(false)} className="absolute top-3 right-3 z-[55]">

@@ -1,6 +1,6 @@
-import Title from "@/components/ui/Title";
-import Image from "next/image";
 import React from "react";
+import Title from "../../components/ui/Title";
+import Image from "next/image";
 
 const index = () => {
   return (
