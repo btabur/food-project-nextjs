@@ -44,21 +44,21 @@ const Header = () => {
               </button>}
         
         </nav>
-        <div className="flex gap-4 items-center justify-center">
-          <a href="#">
-            <FaUserAlt className="hover:text-primary transition-all" />
-          </a>
+        <div className="flex gap-4 items-center justify-center ">
+          <Link href={'/auth/login'}>
+            <FaUserAlt className="hover:text-primary transition-all cursor-pointer" />
+          </Link>
           <a href="">
-            <FaShoppingCart  className="hover:text-primary transition-all"/>
+            <FaShoppingCart  className="hover:text-primary transition-all cursor-pointer"/>
           </a>
           <button onClick={()=>setIsSearchModal(true)}>
-          <FaSearch className="hover:text-primary transition-all" />
+          <FaSearch className="hover:text-primary transition-all cursor-pointer" />
           </button>
          <a href="" className="md:inline-block hidden">
          <button className="btn-primary">Order Online</button>
          </a>
          <button onClick={()=>setIsShowMenu(true)} className="sm:hidden inline-block">
-         <IoMenu className="hover:text-primary transition-all"  />
+         <IoMenu className="hover:text-primary transition-all cursor-pointer"  />
          </button>
        
         </div>

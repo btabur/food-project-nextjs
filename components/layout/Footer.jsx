@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
           </div>
           <div className=" min-w-[300px] flex-1  text-center  flex  flex-col gap-3">
-            <Title addClass={'text-4xl'}>Opening House 32 </Title>
+            <Title addClass={'text-4xl'}>Opening House </Title>
             <p>Every Day</p>
             <p>10:00 -17:00</p>
           </div>
